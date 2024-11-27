@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <img src="/static/uploads/{{ image }}" alt="Uploaded Image" width="500" height="600">
+    <p><strong>This is {{ label }}!</strong></p>
+    <p><strong>Prediction:</strong> {{ probability }}%</p>
+    <a href="/">Go Back</a>
+</body>
+</html>
