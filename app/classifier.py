@@ -3,7 +3,7 @@ import tensorflow as tf
 from app.config import IMAGE_SIZE
 
 
-def preprocess_image(image: tf.Kensor) -> tf.Tensor:
+def preprocess_image(image: tf.Tensor) -> tf.Tensor:
     img_array = tf.keras.preprocessing.image.img_to_array(image)
     img_array = tf.expand_dims(img_array, 0)
 
