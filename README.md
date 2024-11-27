@@ -29,5 +29,10 @@ Open your browser and go to http://127.0.0.1:8000.
 Upload an image for classification and view the result.
 
 ## Example of Prediction
+Upload file page:
+
 ![img.png](app/static/images/img.png)
+
+Prediction page:
+
 ![img.png](app/static/images/img2.png)
