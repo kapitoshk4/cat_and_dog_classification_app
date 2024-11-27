@@ -4,6 +4,7 @@ import uuid
 from fastapi import FastAPI, File, UploadFile, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from starlette.templating import _TemplateResponse
 
 from app.classifier import classify
 from app.config import UPLOAD_FOLDER, cnn_model
@@ -15,12 +16,12 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 
 @app.get("/")
-async def upload_file_page(request: Request):
+async def upload_file_page(request: Request) -> _TemplateResponse:
     return template.TemplateResponse("upload_file.html", {"request": request})
 
 
 @app.post("/predict/")
-async def upload_file(request: Request, file: UploadFile = File(...)):
+async def upload_file(request: Request, file: UploadFile = File(...)) -> _TemplateResponse:
     file.filename = f"{uuid.uuid4()}.jpg"
     upload_image_path = os.path.join(UPLOAD_FOLDER, file.filename)
     contents = await file.read()
