@@ -26,6 +26,8 @@ async def upload_file(request: Request, file: UploadFile = File(...)) -> _Templa
     upload_image_path = os.path.join(UPLOAD_FOLDER, file.filename)
     contents = await file.read()
 
+    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
     with open(upload_image_path, "wb") as f:
         f.write(contents)
 
