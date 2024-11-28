@@ -8,6 +8,9 @@ The notebook includes:
 - Model training.
 - Model evaluation achieving [96% accuracy].
 
+## Check it out!
+[Classifier app deployed to Render](https://cat-and-dog-classification-wkfz.onrender.com/)
+
 ## Dataset
 The dataset used for this project is the [Dataset](https://www.kaggle.com/datasets/ashfakyeafi/cat-dog-images-for-classification/data). It contains labeled images for cats and dogs.
 
